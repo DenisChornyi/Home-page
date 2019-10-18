@@ -41,7 +41,7 @@
 <script>
    
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
     #footer{
         padding: 30px 15px;
@@ -81,5 +81,17 @@
                 color: #00BB6D;
             }
         }
+    }
+    @media (max-width: 750px) {
+        #footer{
+            flex-direction: column;
+        }
+        .footer-left{
+            margin-bottom: 20px;
+        }
+        .footer-right{
+            margin-bottom: 10px;
+        }
+        
     }
 </style>

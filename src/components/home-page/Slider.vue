@@ -43,7 +43,7 @@ export default {
   }
 }
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
    %slider-title{
       padding-left: 10%;
@@ -75,7 +75,11 @@ export default {
       @extend %slider-title;
       background-size: cover;
     }
-    .hooper-next, .hooper-prev {
+    .hooper-navigation {
+      .hooper-liveregion {
+        display: none;
+      }
+      .hooper-prev {
       background: white;
       &:hover{
         color: white;
@@ -88,6 +92,33 @@ export default {
         }
       }
     }
+    .hooper-next {
+      background: white;
+      &:hover{
+        color: white;
+        background: $color-page;
+        .icon-arrowLeft {
+        fill: #fff;
+        }
+        .icon-arrowRight {
+        fill: #fff;
+        }
+      }
+     }
+    }
+    // .hooper-next, .hooper-prev {
+    //   background: white;
+    //   &:hover{
+    //     color: white;
+    //     background: $color-page;
+    //     .icon-arrowLeft {
+    //     fill: #fff;
+    //     }
+    //     .icon-arrowRight {
+    //     fill: #fff;
+    //     }
+    //   }
+    // }
     .slide-title{
       padding: 90px 0 140px;
     }
@@ -117,4 +148,18 @@ export default {
           min-width: 180px;
           margin-top: 30px;
         }
+    @media (max-width: 1000px) {
+      .slide-title-h4{
+        font-size: 20px;
+      }
+      .slide-title-h1{
+        font-size: 38px;
+      }
+    }
+    @media (max-width: 750px) {
+      .slide-title-h4{
+        display: none;
+      }
+    
+    }
     </style>

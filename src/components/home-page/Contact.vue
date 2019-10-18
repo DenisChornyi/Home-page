@@ -52,7 +52,7 @@
 <script>
    
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
    %contact-line{
     display: block;
@@ -64,7 +64,7 @@
    }
     .contact{
         background-color: #3c444f;
-        padding: 60px 15px;
+        padding: 60px 20px;
         display: flex;
         justify-content: space-between;
     }
@@ -102,7 +102,7 @@
     .contact-2_info{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        flex-direction: row;
         margin-bottom: 10px;
         a{
             color: #fff;
@@ -123,7 +123,7 @@
         margin-right: 10px;
     }
     .contact-3-inputs{
-        height: 130px;
+        //height: 130px;
          display: flex;
         justify-content: space-between;
     }
@@ -166,4 +166,79 @@
             min-height: 51px;
         }
     }
+    @media (max-width: 1000px) {
+        .contact{
+        flex-wrap: wrap;
+    }
+    .contact-1{
+       flex-shrink: 0;
+       margin: 0;
+       width: 50%;
+       width: calc(50% - 10px);
+    }
+    .contact-2{
+       flex-shrink: 0;
+       margin: 0;
+       width: 50%;
+       width: calc(50% - 10px);
+    }
+    .contact-3{
+      flex-shrink: 0;
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+       h4{
+            width: 100%;
+        }
+    }
+    .contact-3-inputs_text{
+        width: 55%;
+        textarea{
+            width: 100%;
+        }
+    }
+    .contact-3-inputs_email{
+        width: 45%;
+        
+    }
+}
+@media (max-width: 750px) {
+        .contact{
+        flex-direction: column;
+    }
+    .contact-1{
+       flex-shrink: 0;
+       margin: 0;
+       width: 100%;
+    }
+    .contact-2{
+        margin-top: 20px;
+       flex-shrink: 0;
+       margin: 0;
+       width: 100%;
+    }
+    .contact-3{
+      flex-shrink: 0;
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+       h4{
+            width: 100%;
+        }
+    }
+    .contact-3-inputs_text{
+        width: 100%;
+        textarea{
+            width: 100%;
+        }
+    }
+    .contact-3-inputs_email{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .contact-3-inputs{
+        flex-direction: column;
+    }
+    
+}
 </style>

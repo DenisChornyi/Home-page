@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import Menu from './components/home-page/menu.vue'
-import Slider from './components/home-page/slider.vue'
-import Section from './components/home-page/section-info.vue'
+import Menu from './components/home-page/Menu.vue'
+import Slider from './components/home-page/Slider.vue'
+import Section from './components/home-page/SectionInfo.vue'
 import About from './components/home-page/About.vue'
 import Departments from './components/home-page/Departments.vue'
 import ClientsSay from './components/home-page/ClientsSay.vue'
 import OurDoctors from './components/home-page/OurDoctors.vue'
-import Contact from './components/home-page/contact.vue'
+import Contact from './components/home-page/Contact.vue'
 import Footer from './components/Footer.vue'
 import 'bulma/css/bulma.css'
 export default {

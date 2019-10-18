@@ -46,23 +46,18 @@
 <script>
 
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #47c055;
    .section{
-       width: 100%;
-        margin-right: 15px;
-        padding-top: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-        padding-left: 0;
+        padding: 0 20px 60px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
    }
    .section-info{
-    z-index: 9;
-    margin-top: -90px;
-    padding: 40px 40px;
+    z-index: 5;
+    margin: 20px;
+    margin-top: -40px;
+    padding: 40px;
     background-color: #fff;
     box-shadow: 0 0 3px 0 rgba(42, 42, 42, 0.35);
     p{
@@ -102,7 +97,6 @@
        padding-left: 10px;
        padding-right: 10px;
        height: 50px;
-       width: 100%;
        border: 1px solid #ebebeb;
        border-radius: 0;
        width: 200px;
@@ -149,4 +143,81 @@
             border-top: 1px solid #ebebeb;
             border-bottom: 1px solid #ebebeb;
         }
+     @media (max-width: 1000px) {
+      .section{
+             flex-wrap: wrap;
+              padding-top: 40px;
+         }
+      .section-info{
+          flex-shrink: 0;
+          margin: 0;
+          
+          &:nth-child(1){
+              width: 50%;
+              order: 1;
+              width: calc(50% - 10px);
+          }
+          &:nth-child(2){
+              width: 100%;
+              margin-top: 20px;
+              order: 3;
+          }
+          &:nth-child(3){
+              width: 50%;
+              order: 2;
+              width: calc(50% - 10px);
+          }
+      }
+      .section-info_block_input{
+       width: 50%;
+   }
+   #select{
+       width: 50%;
+   }
+    }
+    @media (max-width: 750px) {
+      .section{
+             flex-direction: column;
+              padding-top: 40px;
+         }
+      .section-info{
+          h4{
+              margin-bottom: 30px;
+          }
+          flex-shrink: 0;
+          margin: 0;
+          
+          &:nth-child(1){
+              width: 100%;
+              order: 1;
+          }
+          &:nth-child(2){
+              width: 100%;
+              margin-top: 20px;
+              order: 3;
+          }
+          &:nth-child(3){
+               margin-top: 20px;
+              width: 100%;
+              order: 2;
+          }
+      }
+      .section-info_block_input{
+       width: 100%;
+       margin-top: 20px;
+   }
+   #select{
+       width: 100%;
+   }
+   .section-info_data{
+       width: 100%;
+   }
+   .section-info_phone{
+       width: 100%;
+   }
+   .section-info_block{
+       margin-top: 0;
+       flex-direction: column;
+   }
+    }
 </style>

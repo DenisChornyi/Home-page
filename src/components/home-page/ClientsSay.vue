@@ -6,9 +6,9 @@
 </template>
 
 <script>
-   
+
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
     .ClientSay{
         background-color: #f2f3f8;

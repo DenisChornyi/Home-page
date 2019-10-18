@@ -2,6 +2,7 @@
     <div class="about">
         <div class="about-section1">
             <div id="about-section-block">
+             <div class="about-section-block-1">
                 <div class="about-section-block-one">
                     <svg id="svg" x="0px" y="0px" width="63px" height="63px" viewBox="0 0 165.855 168.048">
                             <g>
@@ -15,6 +16,8 @@
                     <h3>Emergency Help</h3>
                     <p>Get help 24 hours a day</p>
                 </div>
+             </div>
+             <div class="about-section-block-2">
                 <div class="about-section-block-one">
                     <svg id="svg" x="0px" y="0px" width="45px" height="69px" viewBox="0 0 128.807 200.946">
                             <g>
@@ -37,8 +40,10 @@
                     <p>Get help 24 hours a day</p>
                 </div>
             </div>
+             </div>   
             <div class="about-section-block-box"></div>
             <div id="about-section-block">
+            <div class="about-section-block-3">
                 <div class="about-section-block-one">
                     <svg id="svg" x="0px" y="0px" width="44" height="69px" viewBox="0 0 131.631 201.372">
                             <g>
@@ -59,6 +64,8 @@
                     <h3>Emergency Help</h3>
                     <p>Get help 24 hours a day</p>
                 </div>
+            </div>
+            <div class="about-section-block-4">
                 <div class="about-section-block-one">
                     <svg id="svg" x="0px" y="0px" width="48px" height="58px" viewBox="0 0 159.377 190.207">
                             <g>
@@ -77,6 +84,8 @@
                     <h3>Emergency Help</h3>
                     <p>Get help 24 hours a day</p>
                 </div>
+            </div>    
+                
             </div>
         </div>
         <div class="about-section2">
@@ -109,30 +118,26 @@
 <script>
 
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #47c055;
    .about{
        background: url('../../assets/bg-13.jpg')100% 100% no-repeat;
       background-size: cover;
-      height: 700px;
-      padding: 90px 5px;
+      height: 100%;
+      padding: 90px 20px;
       margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
    }
    .about-section1{
        position: relative;
    }
    #about-section-block{
-       
        display: flex;
-       align-items: center;
-       justify-content: space-between;
+    
    }
    .about-section-block-one{
-       margin: 50px;
-        padding: 30px 40px;
+       padding: 20px;
         min-height: 228px;
         min-width: 300px;
         width: 100%;
@@ -154,7 +159,8 @@
     }
     .about-section2{
         background-color: rgba(82, 98, 125, 0.8);
-        padding: 40px 60px;
+        padding: 30px 40px 0;
+        margin-left: 50px;
         h1{
             color: #fff;
             font-size: 45px;
@@ -168,7 +174,7 @@
     .about-section2-doctor{
         
          display: flex;
-       align-items: center;
+       //align-items: center;
        justify-content: space-between;
        h2{
            color: white;
@@ -184,6 +190,7 @@
         letter-spacing: 2px;
         margin: 45px;
         svg{
+            margin-top: 10px;
             margin-right: 10px;
             z-index: 12;
             fill: white;
@@ -192,11 +199,9 @@
         }
     }
     .about-section2-doctor_info_block{
-        
         border-top: 1px solid #9b9b9b;
           display: flex;
        align-items: center;
-       justify-content: space-between;
        p{
            
            color: #9b9b9b;
@@ -207,26 +212,138 @@
         width:15px;
         background: #47c055;
         position: absolute;
-        right: 49%;
-        top: 49%;
+        right: calc(50% - 8px);
+        top: calc(50% - 8px);
         z-index: 9;
-        &:before{
-            display: inline-block;
-            content: "";
-            border-top: 1px solid #8591a6;
-            width: 200px;
-            margin: 0;
-            margin-right: 50px;
-                transform: translateY(-5px);
-        }
-        &:after {
-            display: inline-block;
-            content: "";
-            border-top: 1px solid #8591a6;
-            width: 300px;
-            margin: 0px;
-                margin-left: 50px;
-                transform: translateY(-35px);
-        }
+
+    }
+    .about-section-block-1{
+        padding-right: 50px;
+        padding-bottom: 25px;
+        border-right: 1px solid #8591a6;
+        margin-bottom: 25px;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .about-section-block-2{
+        padding-left: 25px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #8591a6;
+        margin-left: 25px;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+     .about-section-block-3{
+        padding-top: 50px;
+        padding-right: 25px;
+        border-top: 1px solid #8591a6;
+        margin: 25px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .about-section-block-4{
+        padding-top: 25px;
+        padding-left: 50px;
+        margin: 25px;
+        margin-left: 0;
+        margin-right: 0;
+         margin-bottom: 0;
+        border-left: 1px solid #8591a6;
+    }
+     @media (max-width: 1000px) {
+      .about{
+          flex-direction: column;
+      }
+      .about-section1{
+
+      margin: 0 auto;
+   }
+   .about-section-block-one{
+       min-width: 400px;
+   }
+   .about-section2{
+       margin: 40px 20px;
+       padding: 20px 30px;
+   }
+   .about-section2-doctor_info{
+       margin-right: 20px;
+       svg{
+           margin-top: 30px;
+           width:90px;
+       }
+       p{
+           font-size: 14px;
+       }
+   }   
+    }
+     @media (max-width: 750px) {
+      .about-section1{
+          width: 100%;
+   }
+   .about-section-block{
+       flex-direction: column;
+   }
+   .about-section-block-one{
+       min-width: 100%;
+   }
+   .about-section2{
+       margin: 40px 0;
+       padding: 20px 30px;
+   }
+   .about-section2-doctor{
+       flex-direction: column;
+       img{
+           width: 40%;
+       }
+   }
+   .about-section2-doctor_info{
+       margin-left: 0;
+       svg{
+           margin-top: 30px;
+           width:90px;
+       }
+       p{
+           font-size: 14px;
+       }
+   }
+   #about-section-block{
+       flex-direction: column;
+   }
+   .about-section-block-box {
+       display: none;
+   }
+   .about-section-block-1{
+       padding: 0;
+        margin: 0;
+       border: none;
+        border-bottom: 1px solid #8591a6;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+    .about-section-block-2{
+       padding: 0;
+        margin: 0;
+       border: none;
+        border-bottom: 1px solid #8591a6;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+     .about-section-block-3{
+        padding: 0;
+        border: none;
+        margin: 0;
+        border-bottom: 1px solid #8591a6;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+    .about-section-block-4{
+       padding: 0;
+        margin: 0;
+       border: none;
+     
+    }  
     }
 </style>

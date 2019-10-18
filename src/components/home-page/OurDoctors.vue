@@ -1,10 +1,10 @@
 <template>
-    <div class="Doctors">
-        <div class="departments1">
-            <div class="departments1-title">
+    <div class="doctors">
+        <div class="doctors1">
+            <div class="doctors1-title">
                 <h2>Our Doctors</h2>
-                <div class="departments1-title-buttons">
-                    <button class="departments1-title-buttons_btn">VIEW TIMETABLE</button>
+                <div class="doctors1-title-buttons">
+                    <button class="doctors1-title-buttons_btn">VIEW TIMETABLE</button>
                 </div>
             </div>
             
@@ -78,7 +78,7 @@
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
             </hooper>
         </div>
-        <div class="departments2">
+        <div class="doctors2">
             <div class="doctor-images">
                 <a>Make an<br> Appointment</a>
                 <p>let up help you deal with<br> health concerns.</p>
@@ -101,9 +101,9 @@ export default {
   }
 }
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
-    .Doctors{
+    .doctors{
         padding: 50px 15px 90px;
         display: flex;
        align-items: center;
@@ -162,7 +162,7 @@ export default {
         }
     }
     .doctors-info_phone{
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         #phone{
             fill: #fff;
             height: 15px;
@@ -172,6 +172,105 @@ export default {
             color: #fff;
         }
     
+    }
+    .doctors{
+        padding: 90px 15px;
+        display: flex;
+       justify-content: space-between;
+    }
+    .doctors2{
+        width:17%;
+    }
+    .doctors1{
+    width: 80%;
+        h2{
+            font-size: 45px;
+            color: black;
+            
+        }
+    }
+    .doctors1-title{
+        display: flex;
+       justify-content: space-between;
+       border-bottom: 1px solid #9b9b9b;
+       margin-bottom: 20px;
+       padding-bottom: 20px;
+        
+    }
+    #hooper{
+        height: 100%;
+        
+    }
+    .hooper{
+        height: 100%;
+        
+    }
+    #slide{
+        width: 25%;
+        padding: 10px;
+        height: 250px;
+        &:hover{
+            .slide-info-line{
+                width: 60px;
+            }
+        }
+    }
+    .slide-info{
+        display: flex;
+       justify-content: row;
+       font-size: 20px;
+    }
+    .slide-info-line{
+        height: 5px;
+        transition-duration: 0.5s;
+        width: 30px;
+        border-top: 5px solid #47c055;
+        margin-top:13px;
+        margin-right:13px;
+    }
+    .doctors1-title-buttons_btn{
+        font-size: 12px;
+        border: none;
+        letter-spacing: 0.05em;
+        padding: 9px 15px;
+        text-transform: uppercase;
+        min-width: 180px;
+        min-height: 51px;
+
+    }
+@media (max-width: 1000px) {
+    .doctors{
+         align-items: center;
+    }
+    .doctors1-title{
+        flex-direction: column;
+        align-items: center;
+    }
+    .doctors1{
+        width:100%;
+    }
+    .hooper-slide{
+        width: 33%;
+        padding: 15px;
+    }
+
+    }
+    @media (max-width: 750px) {
+    .doctors{
+        flex-direction: column;
+    }
+     .doctors2{
+        width:26%;
+        margin: 0 auto;
+    } 
+    .doctors1{
+        width:100%;
+    }
+    .hooper-slide{
+        width: 33%;
+        padding: 15px;
+    }
+
     }
     
 </style>

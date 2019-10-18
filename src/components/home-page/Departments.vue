@@ -87,12 +87,11 @@ export default {
   }
 }
 </script>
-<style lang="scss"> 
+<style lang="scss" scoped> 
    $color-page: #00BB6D;
     .departments{
         padding: 90px 15px;
         display: flex;
-       align-items: center;
        justify-content: space-between;
     }
     .departments2{
@@ -116,18 +115,17 @@ export default {
     .departments1{
     width: 80%;
         h2{
-            font-size: 50px;
+            font-size: 45px;
             color: black;
             
         }
     }
     .departments1-title{
         display: flex;
-       align-items: center;
        justify-content: space-between;
        border-bottom: 1px solid #9b9b9b;
        margin-bottom: 20px;
-       padding: 20px 0;
+       padding-bottom: 20px;
         
     }
     #hooper{
@@ -135,7 +133,8 @@ export default {
         
     }
     #slide{
-        width: 150px;
+        width: 25%;
+        padding: 10px;
         height: 250px;
         &:hover{
             .slide-info-line{
@@ -161,7 +160,6 @@ export default {
         margin-right:13px;
     }
     .departments1-title-buttons{
-        position: relative;
     }
     .departments1-title-buttons_btn{
         font-size: 12px;
@@ -173,15 +171,22 @@ export default {
         min-height: 51px;
 
     }
-//     .hooper-prev {
+//  .hooper-track {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     height: 100%;
+//   }
+//   .hooper-liveregion {
+//     display: none;
+//   }
+//   .hooper-prev {
 //     position: absolute;
-//     left: 480px;
+//     left: 180px;
 //     bottom: unset;
-//     top: 50%;
+//     top: -50px;
 //     margin-top: -41px;
 //     transform: translateY(-50%);
 //     padding: 5px 7px;
-//     background-color: transparent;
 //     border: 2px solid rgba(255, 255, 255, .8);
 //     color: #fff;
 //     &:hover {
@@ -191,15 +196,17 @@ export default {
 //       fill: #fff;
 //     }
 //   }
+//   .hooper-list {
+//     overflow: hidden;
+//   }
 //   .hooper-next {
 //     position: absolute;
 //     right: 180px;
 //     bottom: unset;
-//     top: -50%;
+//     top: -50px;
 //     margin-top: -41px;
 //     transform: translateY(-50%);
 //     padding: 5px 7px;
-//     background-color: transparent;
 //     color: #fff;
 //     border: 2px solid rgba(255, 255, 255, .8);
 //     &:hover {
@@ -209,4 +216,38 @@ export default {
 //       fill: #fff;
 //     }
 //   }
+@media (max-width: 1000px) {
+    .departments{
+        flex-direction: column;
+    }
+     .departments2{
+        width:26%;
+    } 
+    .departments1{
+        width:100%;
+    }
+    #slide{
+        width: 33%;
+        padding: 15px;
+    }
+    }
+    @media (max-width: 750px) {
+    .departments{
+        align-items: center;
+    }
+    .departments1-title{
+        flex-direction: column;
+        align-items: center;
+    }
+     .departments2{
+        width:35%;
+    } 
+    .departments1{
+        width:100%;
+    }
+    #slide{
+        width: 33%;
+        padding: 15px;
+    }
+    }
 </style>

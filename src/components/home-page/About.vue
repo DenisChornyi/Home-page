@@ -1,9 +1,11 @@
 <template>
     <div class="about">
-        <div class="about-section1">
-            <div id="about-section-block">
-             <div class="about-section-block-1">
-                <div class="about-section-block-one">
+        <div class="container">
+        <div class="about-sections">
+        <div class="about-sections__left">
+            <div class="about-sections__left__block">
+             <div class="about-sections__left__block__one">
+                <div class="about-sections__left__block__box">
                     <svg id="svg" x="0px" y="0px" width="63px" height="63px" viewBox="0 0 165.855 168.048">
                             <g>
                               <defs></defs>
@@ -17,8 +19,8 @@
                     <p>Get help 24 hours a day</p>
                 </div>
              </div>
-             <div class="about-section-block-2">
-                <div class="about-section-block-one">
+             <div class="about-sections__left__block__two">
+                <div class="about-sections__left__block__box">
                     <svg id="svg" x="0px" y="0px" width="45px" height="69px" viewBox="0 0 128.807 200.946">
                             <g>
                               <defs></defs>
@@ -41,10 +43,10 @@
                 </div>
             </div>
              </div>   
-            <div class="about-section-block-box"></div>
-            <div id="about-section-block">
-            <div class="about-section-block-3">
-                <div class="about-section-block-one">
+            <div class="about-sections__left__block__center"></div>
+            <div class="about-sections__left__block">
+            <div class="about-sections__left__block__three">
+                <div class="about-sections__left__block__box">
                     <svg id="svg" x="0px" y="0px" width="44" height="69px" viewBox="0 0 131.631 201.372">
                             <g>
                               <defs></defs>
@@ -65,8 +67,8 @@
                     <p>Get help 24 hours a day</p>
                 </div>
             </div>
-            <div class="about-section-block-4">
-                <div class="about-section-block-one">
+            <div class="about-sections__left__block__four">
+                <div class="about-sections__left__block__box">
                     <svg id="svg" x="0px" y="0px" width="48px" height="58px" viewBox="0 0 159.377 190.207">
                             <g>
                               <defs></defs>
@@ -88,15 +90,15 @@
                 
             </div>
         </div>
-        <div class="about-section2">
+        <div class="about-sections__right">
             <h1>About Clinic</h1>
             <p>The Medical private medical clinic specializes in a wide variety of health issues, related to absolutely any age or severity level. Our seasoned team of highly trained physicians and practical nurses will be glad to help you 24/7!</p>
-            <div class="about-section2-doctor">
+            <div class="about-sections__right__doctor">
                 <img src="../../assets/about-01-203x260.jpg" alt="doctor">
-                <div class="about-section2-doctor_info">
+                <div class="about-sections__right__doctor__info">
                     <h2>Dr. Richard Molloy</h2>
                     <h5>Head Doctor, Neurology</h5>
-                    <div class="about-section2-doctor_info_block">
+                    <div class="about-sections__right__doctor__info__block">
                         <svg width="42px" height="30px">
                               <defs>
                                 <filter>
@@ -113,12 +115,15 @@
             </div>
         </div>
     </div>
+    </div>
+    </div> 
 </template>
 
 <script>
 
 </script>
 <style lang="scss" scoped> 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
    $color-page: #47c055;
    .about{
        background: url('../../assets/bg-13.jpg')100% 100% no-repeat;
@@ -126,23 +131,122 @@
       height: 100%;
       padding: 90px 20px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
+     
    }
-   .about-section1{
-       position: relative;
-   }
-   #about-section-block{
-       display: flex;
-    
-   }
-   .about-section-block-one{
-       padding: 20px;
-        min-height: 228px;
-        min-width: 300px;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(82, 98, 125, 0.8);
+   .about-sections{
+        display: flex;
+        justify-content: space-between;
+            &__left{
+            position: relative;
+            &__block{
+                display: flex;
+                &__center{
+                    height:15px;
+                    width:15px;
+                    background: #47c055;
+                    position: absolute;
+                    right: calc(50% - 8px);
+                    top: calc(50% - 8px);
+                    z-index: 4;
+                }
+                &__box{
+                    padding: 20px;
+                    min-height: 228px;
+                    min-width: 300px;
+                    width: 100%;
+                    text-align: center;
+                    background-color: rgba(82, 98, 125, 0.8);
+                }
+                &__one{
+                    padding-right: 50px;
+                    padding-bottom: 25px;
+                    border-right: 1px solid #8591a6;
+                    margin-bottom: 25px;
+                    margin-right: 0;
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+                &__two{
+                    padding-left: 25px;
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid #8591a6;
+                    margin-left: 25px;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+                &__three{
+                    padding-top: 50px;
+                    padding-right: 25px;
+                    border-top: 1px solid #8591a6;
+                    margin: 25px;
+                    margin-top: 0;
+                    margin-left: 0;
+                    margin-bottom: 0;
+                }
+                &__four{
+                    padding-top: 25px;
+                    padding-left: 50px;
+                    margin: 25px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    border-left: 1px solid #8591a6;
+                }
+
+            }
+        }
+        &__right{
+            background-color: rgba(82, 98, 125, 0.8);
+            padding: 30px 40px 0;
+            margin-left: 50px;
+            h1{
+                color: #fff;
+                font-size: 45px;
+            }
+            p{
+                margin: 18px 0;
+                color: #fff;
+                font-size: 15px;
+            }
+            &__doctor{
+                display: flex;
+                justify-content: space-between;
+                h2{
+                    color: white;
+                    font-size: 20px;
+                }
+                h5{
+                    color: white;
+                    margin-bottom: 15px;
+                    font-size:12px
+                }
+                img{
+                    margin-bottom: 30px;
+                }
+                &__info{
+                    letter-spacing: 2px;
+                    margin: 45px;
+                    svg{
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        z-index: 12;
+                        fill: white;
+                        height: 100px;
+                        width: 180px;
+                    }
+                    &__block{
+                        border-top: 1px solid #9b9b9b;
+                        display: flex;
+                        align-items: center;
+                        p{
+                            
+                            color: #9b9b9b;
+                        }
+                    }
+                }
+            }
+        }
    }
    h3{
             color: #fff;
@@ -157,193 +261,128 @@
     #svg{
         fill: #47c055;
     }
-    .about-section2{
-        background-color: rgba(82, 98, 125, 0.8);
-        padding: 30px 40px 0;
-        margin-left: 50px;
-        h1{
-            color: #fff;
-            font-size: 45px;
-        }
-        p{
-            margin: 18px 0;
-            color: #fff;
-            font-size: 15px;
+    @media (max-width: 2600px) {
+        .container{
+            max-width: 1500px;
         }
     }
-    .about-section2-doctor{
-        
-         display: flex;
-       //align-items: center;
-       justify-content: space-between;
-       h2{
-           color: white;
-           font-size: 20px;
-       }
-       h5{
-           color: white;
-           margin-bottom: 15px;
-           font-size:12px
-       }
-    }
-    .about-section2-doctor_info{
-        letter-spacing: 2px;
-        margin: 45px;
-        svg{
-            margin-top: 10px;
-            margin-right: 10px;
-            z-index: 12;
-            fill: white;
-            height: 100px;
-            width: 180px;
+   @media (max-width: 1444px) {
+        .container{
+            max-width: 100%;
         }
-    }
-    .about-section2-doctor_info_block{
-        border-top: 1px solid #9b9b9b;
-          display: flex;
-       align-items: center;
-       p{
-           
-           color: #9b9b9b;
-       }
-    }
-    .about-section-block-box{
-        height:15px;
-        width:15px;
-        background: #47c055;
-        position: absolute;
-        right: calc(50% - 8px);
-        top: calc(50% - 8px);
-        z-index: 9;
-
-    }
-    .about-section-block-1{
-        padding-right: 50px;
-        padding-bottom: 25px;
-        border-right: 1px solid #8591a6;
-        margin-bottom: 25px;
-        margin-right: 0;
-        margin-top: 0;
-        margin-left: 0;
-    }
-    .about-section-block-2{
-        padding-left: 25px;
-        padding-bottom: 50px;
-        border-bottom: 1px solid #8591a6;
-        margin-left: 25px;
-        margin-right: 0;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-     .about-section-block-3{
-        padding-top: 50px;
-        padding-right: 25px;
-        border-top: 1px solid #8591a6;
-        margin: 25px;
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 0;
-    }
-    .about-section-block-4{
-        padding-top: 25px;
-        padding-left: 50px;
-        margin: 25px;
-        margin-left: 0;
-        margin-right: 0;
-         margin-bottom: 0;
-        border-left: 1px solid #8591a6;
-    }
-     @media (max-width: 1000px) {
-      .about{
-          flex-direction: column;
+        .about-sections{
+          flex-direction: row;
       }
-      .about-section1{
+    }
+     @media (max-width: 1030px) {
+      .about-sections{
+          flex-direction: column;
+          &__left{
+            margin: 0 auto;
+            &__block__box{
+                min-width: 440px;
+            }
+          }
+          &__right{
+            margin: 40px 0;
+            padding: 20px 30px;
+            &__doctor__info{
+                margin-right: 20px;
+                    svg{
+                        margin-top: 30px;
+                        width:90px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+            }
+          }
+      } 
+    }
+     @media (max-width: 775px) {
+         .about-sections{
+            &__left{
+            flex-direction: column;
+             width: 100%;
+            &__block{
+                flex-direction: column;
+                &__center{
+                     display: none;
+                }
+                &__box{
+                    min-width: 100%;
+                }
+                &__one{
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    border-bottom: 1px solid #8591a6;
+                    margin-bottom: 25px;
+                    padding-bottom: 25px;
+                }
+                &__two{
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    border-bottom: 1px solid #8591a6;
+                    margin-bottom: 25px;
+                    padding-bottom: 25px;
+                }
+                &__three{
+                    padding: 0;
+                    border: none;
+                    margin: 0;
+                    border-bottom: 1px solid #8591a6;
+                    margin-bottom: 25px;
+                    padding-bottom: 25px;
+                }
+                &__four{
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                }
 
-      margin: 0 auto;
+            }
+        }
+        &__right{
+             margin: 40px 0;
+              padding: 20px 30px;
+            h1{
+                color: #fff;
+                font-size: 45px;
+            }
+            p{
+                margin: 18px 0;
+                color: #fff;
+                font-size: 15px;
+            }
+            &__doctor{
+                flex-direction: column;
+                img{
+                    width: 40%;
+                }
+                &__info{
+                   margin-left: 0;
+                        svg{
+                            margin-top: 30px;
+                            width:90px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    &__block{
+                        border-top: 1px solid #9b9b9b;
+                        display: flex;
+                        align-items: center;
+                        p{
+                            
+                            color: #9b9b9b;
+                        }
+                    }
+                }
+            }
+        }
    }
-   .about-section-block-one{
-       min-width: 400px;
-   }
-   .about-section2{
-       margin: 40px 20px;
-       padding: 20px 30px;
-   }
-   .about-section2-doctor_info{
-       margin-right: 20px;
-       svg{
-           margin-top: 30px;
-           width:90px;
-       }
-       p{
-           font-size: 14px;
-       }
-   }   
-    }
-     @media (max-width: 750px) {
-      .about-section1{
-          width: 100%;
-   }
-   .about-section-block{
-       flex-direction: column;
-   }
-   .about-section-block-one{
-       min-width: 100%;
-   }
-   .about-section2{
-       margin: 40px 0;
-       padding: 20px 30px;
-   }
-   .about-section2-doctor{
-       flex-direction: column;
-       img{
-           width: 40%;
-       }
-   }
-   .about-section2-doctor_info{
-       margin-left: 0;
-       svg{
-           margin-top: 30px;
-           width:90px;
-       }
-       p{
-           font-size: 14px;
-       }
-   }
-   #about-section-block{
-       flex-direction: column;
-   }
-   .about-section-block-box {
-       display: none;
-   }
-   .about-section-block-1{
-       padding: 0;
-        margin: 0;
-       border: none;
-        border-bottom: 1px solid #8591a6;
-        margin-bottom: 25px;
-        padding-bottom: 25px;
-    }
-    .about-section-block-2{
-       padding: 0;
-        margin: 0;
-       border: none;
-        border-bottom: 1px solid #8591a6;
-        margin-bottom: 25px;
-        padding-bottom: 25px;
-    }
-     .about-section-block-3{
-        padding: 0;
-        border: none;
-        margin: 0;
-        border-bottom: 1px solid #8591a6;
-        margin-bottom: 25px;
-        padding-bottom: 25px;
-    }
-    .about-section-block-4{
-       padding: 0;
-        margin: 0;
-       border: none;
-     
-    }  
+
     }
 </style>

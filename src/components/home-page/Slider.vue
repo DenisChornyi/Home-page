@@ -3,24 +3,30 @@
 
   <hooper :infiniteScrol="true" :autoPlay="true"  :transition="600" :playSpeed="3500" :wheelControl="false">
     <slide class="slide1">
-      <div class="slide-title">
-          <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
-          <h1 class="slide-title-h1">Special Touch</h1>
-          <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+      <div class="container">
+        <div class="slide-title">
+            <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
+            <h1 class="slide-title-h1">Special Touch</h1>
+            <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+        </div>
       </div>
     </slide>
     <slide class="slide2">
-      <div class="slide-title">
-          <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
-          <h1 class="slide-title-h1">Special Touch</h1>
-          <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+      <div class="container">
+        <div class="slide-title">
+            <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
+            <h1 class="slide-title-h1">Special Touch</h1>
+            <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+        </div>
       </div>
     </slide>
     <slide class="slide3">
-      <div class="slide-title">
-          <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
-          <h1 class="slide-title-h1">Special Touch</h1>
-          <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+      <div class="container">
+        <div class="slide-title">
+            <h4 class="slide-title-h4">A range of programs for women's healthcare</h4>
+            <h1 class="slide-title-h1">Special Touch</h1>
+            <button class="slide-title-button">MAKE AN APPOINTMENT</button>
+        </div>
       </div>
     </slide>
 
@@ -47,17 +53,20 @@ export default {
    $color-page: #00BB6D;
    %slider-title{
       padding-left: 10%;
-      align-items: center;
       display: flex;
+      align-items: center;
       width: 100%;
       white-space: normal;
+   }
+   .container{
+
    }
     .hooper{
         position: relative;
        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         width: 100%;
-        height: 37em;
+        height: 45em;
        
     }
     .slide1{
@@ -148,7 +157,7 @@ export default {
           min-width: 180px;
           margin-top: 30px;
         }
-    @media (max-width: 1000px) {
+    @media (max-width: 1030px) {
       .slide-title-h4{
         font-size: 20px;
       }
@@ -156,7 +165,7 @@ export default {
         font-size: 38px;
       }
     }
-    @media (max-width: 750px) {
+    @media (max-width: 775px) {
       .slide-title-h4{
         display: none;
       }

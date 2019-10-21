@@ -1,8 +1,9 @@
 <template>
+    <div class="container">
     <div class="ClientSay">
         <h1>What Our Clients Say</h1>
     </div>
-    
+    </div>
 </template>
 
 <script>

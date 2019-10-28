@@ -1,15 +1,15 @@
 <template>
     <div class="container">
-    <div class="departments">
-        <div class="departments__left">
+    <div class="departments columns">
+        <div class="departments__left column is-four-fifths">
             <div class="departments__left__title">
                 <h2>Departments</h2>
                 <div class="departments__left__title__buttons">
-                    <button class="departments__left__title__buttons__btn">ALL DEPARTMENS</button>
+                    <button class="departments__left__title__buttons__btn button">ALL DEPARTMENS</button>
                 </div>
             </div>
             
-            <hooper id="hooper" :itemsToShow="4">
+            <hooper id="hooper" :itemsToShow="4" :wheelControl="false" :infiniteScrol="true">
                 <slide id="slide">
                     <img class="depart-img" src="../../assets/departments1.jpg" alt="Photo">
                     <div class="slide__info">
@@ -61,7 +61,7 @@
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
             </hooper>
         </div>
-        <div class="departments__right">
+        <div class="departments__right column">
             <div class="departments__right__buttons">
                 <button class="departments__right__buttons__btn">NEUROLOGY</button>
                 <button class="departments__right__buttons__btn">TRAUMATOLOGY</button>
@@ -90,14 +90,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped> 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
    $color-page: #00BB6D;
     .departments{
         padding: 90px 15px;
         display: flex;
        justify-content: space-between;
        &__right{
-            width:17%;
             &__buttons{
                 display: flex;
                 flex-direction: column;
@@ -116,19 +115,23 @@ export default {
             
         }
         &__left{
-            width: 80%;
                 h2{
-                    font-size: 45px;
-                    color: black;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    letter-spacing: 0.05em;
+                    color: #151515;
+                    font-size: 32px;
                 }
                 &__title{
                     display: flex;
                     justify-content: space-between;
-                    border-bottom: 1px solid #9b9b9b;
+                    border-bottom: 1px solid #ebebeb;;
                     margin-bottom: 20px;
                     padding-bottom: 20px;
                     &__buttons{
                         &__btn{
+                            color: #151515;
+                            background-color: #ebebeb;
                             font-size: 12px;
                             border: none;
                             letter-spacing: 0.05em;
@@ -201,8 +204,11 @@ export default {
         width: 33%;
         padding: 15px;
     }
+    .is-four-fifths{
+        width: 100% !important;
     }
-    @media (max-width: 775px) {
+    }
+    @media (max-width: 700px) {
     .departments{
         align-items: center;
         &__left{
@@ -220,5 +226,8 @@ export default {
             width: 33%;
             padding: 15px;
         }
+        .is-four-fifths{
+        width: 100% !important;
+    }
     }
 </style>

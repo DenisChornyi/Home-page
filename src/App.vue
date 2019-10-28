@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 import Home from './vieux/Home.vue'
 export default {
   name: 'app',
@@ -16,5 +17,47 @@ export default {
 </script>
 
 <style lang="scss">
-
+ $color-page: #00BB6D;
+   .button{
+     border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.button:before {
+  content: "";
+  border-radius: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-page;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.button:hover, .button:focus, .button:active {
+  color: white;
+}
+.button:hover:before, .button:focus:before, .buttonl:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 </style>

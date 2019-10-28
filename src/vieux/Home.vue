@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <Menu />
+    <Search />
+    <Scroll />
     <Slider />
     <Section />
     <About />
@@ -9,6 +11,7 @@
     <OurDoctors />
     <Contact />
     <Footer />
+
   </div>
 </template>
 
@@ -22,7 +25,11 @@ import ClientsSay from '../components/home-page/ClientsSay.vue'
 import OurDoctors from '../components/home-page/OurDoctors.vue'
 import Contact from '../components/home-page/Contact.vue'
 import Footer from '../components/LayoutPartions/Footer.vue'
+import Scroll from '../components/LayoutPartions/Scroll.vue'
+import Search from '../components/LayoutPartions/Search.vue'
 import 'bulma/css/bulma.css'
+
+
 export default {
   name: 'app',
   components: {
@@ -34,13 +41,16 @@ export default {
     ClientsSay,
     OurDoctors,
     Contact,
-    Footer
+    Footer,
+    Scroll,
+    Search
   }
 }
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); 
+
   *{
     box-sizing: border-box;
     margin: 0;

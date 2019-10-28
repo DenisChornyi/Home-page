@@ -47,7 +47,6 @@
 <style lang="scss" scoped> 
    $color-page: #00BB6D;
     #footer{
-        padding: 30px 15px;
         background-color: #323942;
     }
     .footer-section{

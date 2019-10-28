@@ -43,7 +43,7 @@
                 </div>
                 <div class="contact-section__three__inputs__email">
                     <input type="email" placeholder="E-mail">
-                    <button class="contact-section__three__inputs__email__button">SEND MESSAGE</button>
+                    <button class="contact-section__three__inputs__email__button button">SEND MESSAGE</button>
                 </div>
           </div>
         </div>
@@ -133,10 +133,10 @@
             }
             &__inputs{
                 display: flex;
-                justify-content: space-between;
                 &__text{
                     margin-right: 23px;
                     textarea{
+                        outline: none;
                         height: 125px;
                         width: 285px;
                         padding: 12px 20px;
@@ -155,6 +155,7 @@
                     display: flex;
                     flex-direction: column;
                     input{
+                        outline: none;
                         margin-bottom: 23px;
                         min-width: 180px;
                         min-height: 51px;
@@ -176,6 +177,9 @@
             }
            
         }
+   }
+   .button:before {
+     background: #2f353e;
    }
   @media (max-width: 2600px) {
         .container{
@@ -224,7 +228,7 @@
         }
     }
 }
-@media (max-width: 775px) {
+@media (max-width: 700px) {
         .contact-section{
         flex-direction: column;
          &__one{

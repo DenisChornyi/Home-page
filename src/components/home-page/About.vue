@@ -1,8 +1,8 @@
 <template>
     <div class="about">
         <div class="container">
-        <div class="about-sections">
-        <div class="about-sections__left">
+        <div class="about-sections columns">
+        <div class="about-sections__left column">
             <div class="about-sections__left__block">
              <div class="about-sections__left__block__one">
                 <div class="about-sections__left__block__box">
@@ -90,7 +90,7 @@
                 
             </div>
         </div>
-        <div class="about-sections__right">
+        <div class="about-sections__right column ">
             <h1>About Clinic</h1>
             <p>The Medical private medical clinic specializes in a wide variety of health issues, related to absolutely any age or severity level. Our seasoned team of highly trained physicians and practical nurses will be glad to help you 24/7!</p>
             <div class="about-sections__right__doctor">
@@ -150,9 +150,9 @@
                     z-index: 4;
                 }
                 &__box{
-                    padding: 20px;
+                    padding: 35px;
                     min-height: 228px;
-                    min-width: 300px;
+                    min-width: 315px;
                     width: 100%;
                     text-align: center;
                     background-color: rgba(82, 98, 125, 0.8);
@@ -198,8 +198,8 @@
         }
         &__right{
             background-color: rgba(82, 98, 125, 0.8);
-            padding: 30px 40px 0;
-            margin-left: 50px;
+            padding: 30px 40px 0 !important;
+            margin-left: 60px;
             h1{
                 color: #fff;
                 font-size: 45px;
@@ -226,7 +226,7 @@
                 }
                 &__info{
                     letter-spacing: 2px;
-                    margin: 45px;
+                    margin: 30px;
                     svg{
                         margin-top: 10px;
                         margin-right: 10px;
@@ -236,12 +236,13 @@
                         width: 180px;
                     }
                     &__block{
-                        border-top: 1px solid #9b9b9b;
+                        border-top: 1px solid #8591a6;
+                        width: 367px;
                         display: flex;
                         align-items: center;
                         p{
                             
-                            color: #9b9b9b;
+                                color: #8591a6;
                         }
                     }
                 }
@@ -261,6 +262,9 @@
     #svg{
         fill: #47c055;
     }
+    .column{
+        padding: 0;
+    }
     @media (max-width: 2600px) {
         .container{
             max-width: 1500px;
@@ -278,16 +282,24 @@
       .about-sections{
           flex-direction: column;
           &__left{
+              width: 100%;
             margin: 0 auto;
-            &__block__box{
-                min-width: 440px;
+            &__block{
+                width: 100%;
+                &__box{
+                min-width: 453px;
+                }
             }
           }
           &__right{
             margin: 40px 0;
             padding: 20px 30px;
             &__doctor__info{
+                width: 100%;
                 margin-right: 20px;
+                &__block{
+                    width: 100%;
+                }
                     svg{
                         margin-top: 30px;
                         width:90px;
@@ -299,7 +311,40 @@
           }
       } 
     }
-     @media (max-width: 775px) {
+    @media (max-width: 820px) {
+      .about-sections{
+          flex-direction: column;
+          &__left{
+             // width: 100%;
+            margin: 0 auto;
+            &__block{
+                width: 100%;
+                &__box{
+                min-width: 325px;
+                }
+            }
+          }
+          &__right{
+            margin: 40px 0;
+            padding: 20px 30px;
+            &__doctor__info{
+                width: 100%;
+                margin-right: 20px;
+                &__block{
+                    width: 100%;
+                }
+                    svg{
+                        margin-top: 30px;
+                        width:90px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+            }
+          }
+      } 
+    }
+     @media (max-width: 700px) {
          .about-sections{
             &__left{
             flex-direction: column;
@@ -365,6 +410,7 @@
                    margin-left: 0;
                         svg{
                             margin-top: 30px;
+                            margin-right: 30px;                            
                             width:90px;
                         }
                         p{

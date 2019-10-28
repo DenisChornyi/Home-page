@@ -1,16 +1,16 @@
 <template>
     <div class="container">
-    <div class="doctors">
-        <div class="doctors__left">
+    <div class="doctors columns">
+        <div class="doctors__left column is-four-fifths">
             <div class="doctors__left__title">
                 <h2>Our Doctors</h2>
                 <div class="doctors__left__title__buttons">
-                    <button class="doctors__left__title__buttons__btn">VIEW TIMETABLE</button>
+                    <button class="doctors__left__title__buttons__btn button">VIEW TIMETABLE</button>
                 </div>
             </div>
             
-            <hooper id="hooper" :itemsToShow="4">
-                <slide class="slide-doctor">
+            <hooper id="hooper" :itemsToShow="4" :wheelControl="false" :infiniteScrol="true">
+                <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </slide>
-                 <slide class="slide-doctor">
+                 <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </slide>
-               <slide class="slide-doctor">
+               <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </slide>
-                <slide class="slide-doctor">
+                <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </slide>
-                 <slide class="slide-doctor">
+                 <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </slide>
-                <slide class="slide-doctor">
+                <slide id="slide" class="slide-doctor">
                     <img class="slide-doctor__img" src="../../assets/diagnostics-04.jpg" alt="Photo">
                     <div class="slide-doctor__info">
                         <h4>Dr. Max Turner</h4>
@@ -79,7 +79,7 @@
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
             </hooper>
         </div>
-        <div class="doctors__right">
+        <div class="doctors__right column">
             <div class="doctors__right__images">
                 <a>Make an<br> Appointment</a>
                 <p>let up help you deal with<br> health concerns.</p>
@@ -89,6 +89,7 @@
     </div>
 </template>    
 <script>
+
     import { Hooper, Slide } from 'hooper';
 import 'hooper/dist/hooper.css';
   import {
@@ -111,20 +112,24 @@ export default {
         display: flex;
        justify-content: space-between;
        &__left{
-           width: 80%;
             h2{
-                font-size: 45px;
-                color: black;
+                     font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    letter-spacing: 0.05em;
+                    color: #151515;
+                    font-size: 32px;
                 
             }
             &__title{
                 display: flex;
                 justify-content: space-between;
-                border-bottom: 1px solid #9b9b9b;
+                border-bottom: 1px solid #ebebeb;
                 margin-bottom: 20px;
                 padding-bottom: 20px;
                 &__buttons{
                     &__btn{
+                        color: #151515;
+                        background-color: #ebebeb;
                         font-size: 12px;
                         border: none;
                         letter-spacing: 0.05em;
@@ -137,7 +142,6 @@ export default {
             }
        }
        &__right{
-            width:60%;
             &__images{
                 background: url('../../assets/about-02-268x483.jpg')100% 100% no-repeat;
                 background-size: cover;
@@ -164,12 +168,18 @@ export default {
             }
        }
     }
+    #slide{
+        width: 25%;
+        padding: 10px;
+    }
     .slide-doctor{
-        //margin: 0 10px;
+        max-height: 363px;
+        max-width: 258px;
+        margin: 0 10px;
         
        &__img{
-            max-height: 216px;
-            max-width: 268px;
+            max-height: 208px;
+            max-width: 258px;
             margin: 0;
        }
        &__info{
@@ -181,6 +191,7 @@ export default {
             text-align: center;
             color: #fff;
             p{
+                font-size: 14px;
                 color: $color-page;
                 margin: 0 auto;
                 width: 120px;
@@ -188,10 +199,14 @@ export default {
                 border-bottom: 1px solid #9b9b9b;
                 margin-bottom: 10px;
             }
+            h4{
+                line-height: 1.441;
+                color: #fff;
+                font-size: 18px;
+            }
             &__phone{
-                    padding-bottom: 20px;
                     #phone{
-                        fill: #fff;
+                        fill: $color-page;
                         height: 15px;
                         margin-right: 10px;
                     }
@@ -209,12 +224,6 @@ export default {
     #slide{
         width: 25%;
         padding: 10px;
-        height: 250px;
-        &:hover{
-            .slide-info-line{
-                width: 60px;
-            }
-        }
     }
 @media (max-width: 2600px) {
         .container{
@@ -230,24 +239,29 @@ export default {
     }
 }
 @media (max-width: 1030px) {
+    .doctors__right{
+         width: 280px;
+    }
     .doctors{
          align-items: center;
          flex-direction: column;
-    }
-    .doctors1-title{
-        flex-direction: column;
-        align-items: center;
-    }
-    .doctors1{
-        width:100%;
+          &__left{
+            width:100%;
+                  
+        }
     }
     .hooper-slide{
         width: 33%;
         padding: 15px;
     }
-
+    .is-four-fifths{
+        width: 100% !important;
     }
-    @media (max-width: 775px) {
+    .slide-doctor__info{
+            padding:22px 20px;    
+    }
+}
+    @media (max-width: 700px) {
         .doctors{
             flex-direction: column;
         &__left{
@@ -258,7 +272,8 @@ export default {
             }
         }
         &__right{
-            width:26%;
+           width: 268px;
+             height: 483px;
             margin: 0 auto;
         }
     } 

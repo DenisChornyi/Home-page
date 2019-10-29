@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Menu />
-    <Search />
+    <Menu @search='addProps()'/>
+    <Search :classSearch='isActive' />
     <Scroll />
     <Slider />
     <Section />
@@ -32,6 +32,11 @@ import 'bulma/css/bulma.css'
 
 export default {
   name: 'app',
+  data (){
+     return {
+             isActive : false
+           }
+  },
   components: {
     Menu,
     Slider,
@@ -44,6 +49,11 @@ export default {
     Footer,
     Scroll,
     Search
+  },
+  methods:{
+    addProps(){
+      this.isActive = true
+    }
   }
 }
 </script>

@@ -9,7 +9,7 @@
                 </div>
             </div>
             
-            <hooper id="hooper" :itemsToShow="4" :wheelControl="false" :infiniteScrol="true">
+            <hooper id="hooper" :settings="hooperSettings">
                 <slide id="slide">
                     <img class="depart-img" src="../../assets/departments1.jpg" alt="Photo">
                     <div class="slide__info">
@@ -86,7 +86,24 @@ export default {
     Hooper,
     Slide,
     HooperNavigation
-  }
+  },
+  data() {
+    return {
+      hooperSettings: {
+           itemsToShow: 4,
+           wheelControl: false,
+           infiniteScrol: true,
+           breakpoints: {
+            1000: {
+                itemsToShow: 3
+            },
+            430:{
+                itemsToShow: 1
+            }
+        }
+      }
+    }
+}
 }
 </script>
 <style lang="scss" scoped> 
@@ -207,6 +224,7 @@ export default {
     .is-four-fifths{
         width: 100% !important;
     }
+    
     }
     @media (max-width: 700px) {
     .departments{

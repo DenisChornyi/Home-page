@@ -273,6 +273,7 @@
               width: 100%;
               margin-top: 20px;
               order: 3;
+              min-width: 100%;
           }
           &:nth-child(3){
                margin-top: 20px;
